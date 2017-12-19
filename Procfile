@@ -1,1 +1,1 @@
-worker: bundle exec ruby foodsearch.rb
+worker: bundle exec ruby food_search.rb
