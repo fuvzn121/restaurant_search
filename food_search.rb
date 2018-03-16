@@ -30,7 +30,7 @@ stream.user do |object|
     to_name = object.user.screen_name
     food = object.text.gsub(regex, "")
     food = food.gsub(/@.+\s/, "") if object.in_reply_to_screen_name == my_name
-    url = "https://api.gnavi.co.jp/RestSearchAPI/20150630/?keyid=3387d22587c7f29f84cf490110541a26&format=json&areacode_s=AREAS2288&freeword=#{food}"
+    url = "https://api.gnavi.co.jp/RestSearchAPI/20150630/?keyid=YOUE_API_KEY&format=json&areacode_s=AREAS2288&freeword=#{food}"
     hash =  JSON.parse(open(URI.escape url).read)
     hash_num = rand(hash["hit_per_page"].to_i)
     if hash['error']
